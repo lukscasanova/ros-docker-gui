@@ -219,3 +219,7 @@ tools_cmake: ## [Tools]  Create a new image that contains CMake. Use it as "make
 	docker build --build-arg="ARG_FROM=$(RUN_ARGS)" -t $(RUN_ARGS)-cmake tools/cmake
 	@printf "\033[92mDocker Image: $(RUN_ARGS)-cmake\033[0m\n"
 
+
+tools_superodometry: ## [Tools]  Create a new image that contains CMake. Use it as "make tools_superodometry <existing_docker_image>".
+	docker build --build-arg="ARG_FROM=$(RUN_ARGS)" -t $(RUN_ARGS)-superodometry tools/superodometry
+	@printf "\033[92mDocker Image: $(RUN_ARGS)-superodometry\033[0m\n"
